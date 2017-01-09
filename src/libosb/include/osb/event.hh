@@ -7,6 +7,8 @@
 
 #include <string>
 #include <ostream>
+#include <memory>
+#include <forward_list>
 
 namespace osb {
     enum class EventType {
@@ -168,9 +170,7 @@ namespace osb {
     public:
         TimeValue startTime;
         int loopCount;
-        
-        LoopEvent()
-    }
+    };
 
     inline std::ostream& operator<<(std::ostream& os, Event const& event) {
         return event.writeToStream(os);
